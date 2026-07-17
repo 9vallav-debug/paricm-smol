@@ -101,10 +101,14 @@
             min-width: 300px;
             text-align: center;
         }
-        .about-img img {
-            max-width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+       .about-img img {
+            width: 320px;          /* Фиксированная ширина */
+            height: 320px;         /* Фиксированная высота (равная ширине для идеального круга) */
+            object-fit: cover;     /* Защищает лицо от искажения и растягивания */
+            border-radius: 50%;    /* Делает картинку идеально круглой */
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1); /* Мягкая красивая тень */
+            display: block;
+            margin: 0 auto;        /* Центрирование на мобильных экранах */
         }
 
         /* Услуги */
