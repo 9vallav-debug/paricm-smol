@@ -191,8 +191,7 @@
             header p { font-size: 1rem; }
             .about-content { flex-direction: column-reverse; }
         }
-
- /* Стили для галереи работ */
+/* Обновленные стили галереи работ */
         .gallery {
             padding: 60px 0;
             background: #fff;
@@ -209,11 +208,12 @@
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             background: #fff;
-            padding: 10px;
-            transition: transform 0.3s;
+            padding: 12px;
+            transition: transform 0.4s ease, box-shadow 0.4s ease; /* Плавная анимация */
         }
         .gallery-item:hover {
-            transform: scale(1.03);
+            transform: scale(1.20); /* Увеличенный масштаб при наведении */
+            box-shadow: 0 12px 25px rgba(0,0,0,0.18); /* Усиленная тень при наведении */
         }
         .gallery-item img {
             width: 100%;
@@ -221,7 +221,14 @@
             border-radius: 5px;
             display: block;
         }
-        
+        .gallery-caption {
+            margin-top: 12px;
+            font-size: 1.05rem;
+            font-weight: 500;
+            color: #444;
+            letter-spacing: 0.5px;
+        }
+
     </style>
 </head>
 <body>
@@ -284,20 +291,27 @@
         </div>
     </section>
 
-<!-- Галерея работ -->
+<!-- Галерея работ с подписями -->
     <section class="gallery">
         <div class="container">
             <h2>Мои работы</h2>
             <div class="gallery-grid">
+                
                 <div class="gallery-item">
-                    <img src="2.jpg" alt="Окрашивание волос Алеся Щербак">
+                    <img src="2.jpg" alt="Огненное мелирование">
+                    <div class="gallery-caption">Яркое колорирование и акценты</div>
                 </div>
+                
                 <div class="gallery-item">
-                    <img src="3.jpg" alt="Окрашивание волос Смолевичи">
+                    <img src="3.jpg" alt="Клубничный блонд">
+                    <div class="gallery-caption">Нежный клубничный блонд</div>
                 </div>
+                
                 <div class="gallery-item">
-                    <img src="4.jpg" alt="Колорирование волос Estel">
+                    <img src="4.jpg" alt="Натуральный русый">
+                    <div class="gallery-caption">Элегантное пастельное тонирование</div>
                 </div>
+                
             </div>
         </div>
     </section>
