@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Алеся Щербак | Парикмахер-стилист Смолевичи</title>
+    <style>
+        /* Общие стили */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            color: #333;
+            line-height: 1.6;
+            background-color: #fafafa;
+        }
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2rem;
+            position: relative;
+            color: #222;
+        }
+        h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: #d4af37; /* Золотой акцент */
+            margin: 10px auto 0;
+        }
+
+        /* Шапка (Hero-блок) */
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://unsplash.com') no-repeat center center/cover;
+            height: 80vh;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+        header p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #d4af37;
+            color: #fff;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+        .btn:hover {
+            background-color: #aa8c2c;
+        }
+
+        /* О мастере */
+        .about {
+            padding: 60px 0;
+            background: #fff;
+        }
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        .about-text p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        .about-img {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+        .about-img img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Услуги */
+        .services {
+            padding: 60px 0;
+            background: #f4f4f4;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .service-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+        .service-card h3 {
+            margin-bottom: 15px;
+            color: #d4af37;
+        }
+
+        /* Преимущества */
+        .features {
+            padding: 60px 0;
+            background: #fff;
+            text-align: center;
+        }
+        .features-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .feature-item {
+            flex: 1;
+            min-width: 250px;
+        }
+        .feature-item h4 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        /* Подвал / Контакты */
+        footer {
+            background: #222;
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+        }
+        footer p {
+            margin-bottom: 20px;
+        }
+        .social-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            padding: 8px 15px;
+            border: 1px solid #fff;
+            border-radius: 4px;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        .social-links a:hover {
+            background: #fff;
+            color: #222;
+        }
+
+        /* Адаптивность для мобильных */
+        @media(max-width: 768px) {
+            header h1 { font-size: 2.2rem; }
+            header p { font-size: 1rem; }
+            .about-content { flex-direction: column-reverse; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <header>
+        <h1>Алеся Щербак</h1>
+        <p>Парикмахер-стилист в г. Смолевичи • Эксперт по колорированию ESTEL</p>
+        <!-- Замените номер телефона на ваш (без плюса для ссылки) -->
+        <a href="https://wa.me" class="btn" target="_blank">Записаться на процедуру</a>
+    </header>
+
+    <!-- О мастере -->
+    <section class="about">
+        <div class="container">
+            <h2>О мастере</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Приветствую! Меня зовут Алеся Щербак. Я дипломированный парикмахер-стилист, безумно влюбленный в свое дело.</p>
+                    <p>Специализируюсь на создании чистых блондов, трендовых техниках окрашивания и индивидуальном подборе стрижек. Регулярно прохожу обучение в академии Estel Belarus (Минск), чтобы предлагать вам только лучшие и безопасные решения для ваших волос.</p>
+                </div>
+                <div class="about-img">
+                    <!-- Замените ссылку на фото вашего профиля -->
+                    <img src="https://unsplash.com" alt="Алеся Щербак">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Услуги -->
+    <section class="services">
+        <div class="container">
+            <h2>Услуги и техники</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Сложное окрашивание</h3>
+                    <p>Airtouch, балаяж, шатуш, мелирование и выход из темного цвета без потери качества.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Блонд & Тонирование</h3>
+                    <p>Создание идеального тотал-блонда, пастельное тонирование в персиковые и платиновые тона.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Стрижки</h3>
+                    <p>Женские и мужские стрижки любой сложности с учетом формы лица и структуры волос.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Уход и Защита</h3>
+                    <p>Глубокие восстанавливающие процедуры для укрепления волос после осветления.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Почему выбирают меня -->
+    <section class="features">
+        <div class="container">
+            <h2>Почему стоит прийти ко мне?</h2>
+            <div class="features-list">
+                <div class="feature-item">
+                    <h4>Профессиональный бренд</h4>
+                    <p>Работаю исключительно на проверенных сертифицированных материалах ESTEL PRO.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Честный подход</h4>
+                    <p>Всегда провожу диагностику волос и подбираю технику, которая сбережет их здоровье.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Уют и забота</h4>
+                    <p>Каждого клиента ждет внимательное отношение, комфортная атмосфера и чашечка чая.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал / Контакты -->
+    <footer>
+        <div class="container">
+            <p><strong>Адрес:</strong> г. Смолевичи (по предварительной записи)</p>
+            <p>Для консультации пришлите фото ваших волос при хорошем освещении в мессенджер:</p>
+            <div class="social-links">
+                <!-- Замените ссылки на ваши реальные аккаунты -->
+                <a href="https://instagram.com" target="_blank">Instagram</a>
+                <a href="https://wa.me" target="_blank">WhatsApp</a>
+                <a href="viber://chat?number=%2B375290000000" target="_blank">Viber</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
